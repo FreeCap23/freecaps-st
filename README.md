@@ -21,7 +21,7 @@ Dependencies
 
 Installation
 =============================================================
-1) Git clone this repo somewhere, and compile by running sudo make clean install.
+1) Git clone this repo somewhere, and compile by running `sudo make clean install`.
 
 Configuration
 ============================================================
