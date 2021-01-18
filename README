@@ -1,34 +1,28 @@
-st - simple terminal
---------------------
-st is a simple terminal emulator for X which sucks less.
+FreeCap's Build of st
 
+About
+==========================
+This build of st is pretty lightly customized. Nothing crazy. I guess I only uploaded it to GitHub if I ever reinstall Linux and need a quick setup, so if you want to use this thing and it's not supported anymore, don't ask. Why would you want to use this though?
 
-Requirements
-------------
-In order to build st you need the Xlib header files.
+Patches
+==================================================
+-anysize (st-anysize-20201003-407a3d0.diff)
+-clipboard (st-clipboard-0.8.3.diff)
+-ligatures (st-ligatures-scrollback-20200430-0.8.3.diff)
+-scrollback (st-scrollback-0.8.4.diff)
+-rightclickpaste (st-rightclickpaste-0.8.2.diff)
+-w3m (st-w3m-0.8.3.diff)
 
+Dependencies
+=============================================================
+CaskaydiaCove Nerd Font Mono  =>  For the terminal font and the symbols in dwm-bar & the trash can tag.
+PyWal  =>  For the color scheme. Pretty sure you need to run it at least once for it to work.
+Harfbuzz  =>  For the ligatures
 
 Installation
-------------
-Edit config.mk to match your local setup (st is installed into
-the /usr/local namespace by default).
+=============================================================
+1) Git clone this repo somewhere, and compile by running sudo make clean install.
 
-Afterwards enter the following command to build and install st (if
-necessary as root):
-
-    make clean install
-
-
-Running st
-----------
-If you did not install st with make clean install, you must compile
-the st terminfo entry with the following command:
-
-    tic -sx st.info
-
-See the man page for additional details.
-
-Credits
--------
-Based on Aurélien APTEL <aurelien dot aptel at gmail dot com> bt source code.
-
+Configuration
+============================================================
+Edit config.h and recompile.
